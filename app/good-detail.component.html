@@ -1,0 +1,8 @@
+<div *ngIf="good">
+	<div><label>ID: </label>{{good.id}}</div>
+	<div><label>Name: </label>{{good.name}}</div>
+	<div><label>Price: </label>{{good.price}}</div>
+	<div><label>Created At: </label>{{good.created_at}}</div>
+	<button [routerLink]="['/goods/edit',good.id]">Edit</button>
+	<button (click)="goBack()">Back</button>
+</div>

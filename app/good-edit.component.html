@@ -1,0 +1,13 @@
+<div *ngIf="good">
+	<div>
+		<label>Name: </label>
+		<input [(ngModel)]="good.name" placeholder="name" />
+	</div>
+	<div>
+		<label>Price: </label>
+		<input [(ngModel)]="good.price" placeholder="price" />
+	</div>
+	<button (click)="remove()">Remove</button>
+	<button (click)="save()">Save</button>
+	<button (click)="goBack()">Back</button>
+</div>

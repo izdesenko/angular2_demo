@@ -1,0 +1,8 @@
+<h3>Top Goods</h3>
+<ul class="grid grid-pad">
+	<li *ngFor="let good of goods" [routerLink]="['/goods/info/',good.id]" class="col-1-4">
+		<div class="module good">
+			<h4>{{good.name}} - {{good.price}}$!</h4>
+		</div>
+	</li>
+</ul>

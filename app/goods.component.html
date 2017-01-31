@@ -1,0 +1,26 @@
+<h2>Goods</h2>
+<table>
+	<tr>
+		<td>ID</td>
+		<td>Name</td>
+		<td>Price</td>
+		<td>Created At</td>
+	</tr>
+	<tr
+		*ngFor="let good of goods"
+		[class.selected]="good === selectedGood"
+		(click)="onSelect(good)"
+		[routerLink]="['/goods/info/',good.id]">
+		<td>{{good.id}}</td>
+		<td>{{good.name}}</td>
+		<td>{{good.price}}$</td>
+		<td>{{good.created_at}}$</td>
+	</tr>
+</table>
+
+<div *ngIf="selectedGood">
+	<h2>
+	{{selectedGood.name | uppercase}} is a good choice
+	</h2>
+	<button (click)="gotoDetail(good)">View Details</button>
+</div>
